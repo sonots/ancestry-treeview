@@ -1,6 +1,7 @@
 #! /usr/bin/env gem build
 # encoding: utf-8
-require File.expand_path('../lib/ancestry/treeview//version', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+require 'ancestry/treeview/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'ancestry-treeview'

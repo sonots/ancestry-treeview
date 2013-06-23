@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_runtime_dependency "ancestry"
+  gem.add_runtime_dependency "ancestry", [">= 2.0.0"]
 
   # for testing
   gem.add_development_dependency "rake"

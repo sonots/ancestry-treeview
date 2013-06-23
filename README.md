@@ -1,6 +1,6 @@
 # ancestry-treeview [![Build Status](https://secure.travis-ci.org/sonots/ancestry-treeview.png?branch=master)](http://travis-ci.org/sonots/ancestry-treeview) [![Dependency Status](https://gemnasium.com/sonots/ancestry-treeview.png)](https://gemnasium.com/sonots/ancestry-treeview)
 
-testing ruby: 1.9.2, 1.9.3, 2.0.0;
+testing ruby: 1.9.2, 1.9.3, 2.0.0; ancestry: 2.0.0
 
 ## About OnePuch
 

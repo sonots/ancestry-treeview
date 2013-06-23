@@ -1,0 +1,72 @@
+/*
+ * @reference
+ *    http://jsfiddle.net/Fh47n/
+ *    http://stackoverflow.com/questions/11167628.ancestry-treeviews-in-twitter-bootstrap
+ * */
+.ancestry-treeview li {
+  margin: 0;
+  list-style-type: none;
+  position: relative;
+  padding: 5px 5px 0px 5px;
+}
+
+.ancestry-treeview li::before {
+  content: '';
+  position: absolute; 
+  top: 0;
+  width: 1px; 
+  height: 100%;
+  right: auto; 
+  left: -10px;
+  border-left: 1px solid #ccc;
+  bottom: 50px;
+}
+.ancestry-treeview li::after {
+  content: '';
+  position: absolute; 
+  top: 15px; 
+  width: 15px; 
+  height: 20px;
+  right: auto; 
+  left: -10px;
+  border-top: 1px solid #ccc;
+}
+.ancestry-treeview li a {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: #666;
+  font-family: arial, verdana, tahoma;
+  font-size: 11px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.ancestry-treeview li.leaf a {
+  background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
+}
+
+/*Remove connectors before root*/
+.ancestry-treeview > ul > li::before, .ancestry-treeview > ul > li::after {
+  border: 0;
+}
+/*Remove connectors after last child*/
+.ancestry-treeview li:last-child::before { 
+  height: 15px;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the element also*/
+.ancestry-treeview li a:hover, .ancestry-treeview li a:hover+ul li a {
+  background: #c8f8e4; color: #000; border: 1px solid #94a0b4;
+}
+/*Connector styles on hover*/
+.ancestry-treeview li a:hover+ul li::after, 
+.ancestry-treeview li a:hover+ul li::before, 
+.ancestry-treeview li a:hover+ul::before, 
+.ancestry-treeview li a:hover+ul ul::before {
+  border-color:  #94a0b4;
+}
+

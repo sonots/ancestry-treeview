@@ -28,7 +28,7 @@ Default html links in the tree view are as
 
     <a href="#">id</a>
     
-You can change the htmll link by giving a block as
+You can change the html link by giving a block as
 
     node.tree {|node| link_to("text", your_controller_path(node)) }
 

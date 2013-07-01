@@ -3,6 +3,9 @@ module Ancestry
     def tree(params = {})
       return '' unless self
       subtree = (params[:to_depth].present? ? self.subtree(to_depth: params[:to_depth]) : self.subtree).order('path ASC')
+      if params[:conditions].is_a?(Array) || params[:conditions].is_a?(Hash)
+        subtree = subtree.where(params[:conditions])
+      end
       html = '<div class="ancestry-treeview">'
       open_ul = 0
       prev_depth = self.depth - 1
